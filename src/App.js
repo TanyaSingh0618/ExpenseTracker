@@ -33,10 +33,15 @@ function App() {
     }
   ]
 
+  const AddExpenseData = (expense) => {
+    console.log('appjs');
+    console.log(expense);
+  }
+
 
   return (
     <div className='App-header'>
-      <NewExpenses />
+      <NewExpenses onAddExpense={AddExpenseData} />
       <Expenses data={expenseItems} />
     </div>
   );
