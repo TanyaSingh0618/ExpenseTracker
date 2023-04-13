@@ -16,9 +16,9 @@
     font: inherit;
     padding: 0.5rem;
     border-radius: 6px;
-    border: 1px solid #ccc;
     width: 20rem;
     max-width: 100%;
+    color: black;
 }
 
 .new_expense__actions {
@@ -26,5 +26,5 @@
     position: absolute;
     float: right;
     left: 65%;
-    top: 25%;
+    top: 22%;
 }
