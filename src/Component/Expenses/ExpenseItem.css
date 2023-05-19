@@ -23,6 +23,8 @@
     justify-content: flex-start;
     flex: 1;
     color: white;
+    display: flex;
+    position: relative;
 }
 
 .expense-item h2 {
@@ -41,11 +43,14 @@
     border: 1px solid white;
     padding: 0.5rem;
     border-radius: 12px;
+    position: absolute;
+    right: 0;
 }
 
 .expense_title {
     word-wrap: break-word;
     word-break: break-all;
+    margin-left: 5px;
 }
 
 @media (min-width: 580px) {
@@ -54,6 +59,14 @@
         align-items: center;
         justify-content: flex-start;
         flex: 1;
+        display: flex;
+        position: relative;
+    }
+
+    .expense_title {
+        word-wrap: break-word;
+        word-break: break-all;
+        margin-left: 5px;
     }
 
     .eexpense_item__description h2 {
@@ -68,5 +81,7 @@
         background-color: #40005d;
         border: 1px solid white;
         border-radius: 12px;
+        position: absolute;
+        right: 0;
     }
 }

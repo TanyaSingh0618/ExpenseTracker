@@ -11,14 +11,19 @@ function Expenses(expData) {
     const filterSelectYear = (SelectYear) => {
         setFilterYear(SelectYear);
     }
+    const filteredItems = expData.data.filter((expense) => {
+        return expense.date.getFullYear().toString() === FilterYear;
+    }, [FilterYear]);
 
     return (<div>
         <Card className='expenses'>
             <ExpenseFilter yearselected={FilterYear} onChangeFilter={filterSelectYear} />
-            <Expenseitems title={expData.data[0].title} amount={expData.data[0].amount} date={expData.data[0].date} />
-            <Expenseitems title={expData.data[1].title} amount={expData.data[1].amount} date={expData.data[1].date} />
-            <Expenseitems title={expData.data[2].title} amount={expData.data[2].amount} date={expData.data[2].date} />
-            <Expenseitems title={expData.data[3].title} amount={expData.data[3].amount} date={expData.data[3].date} />
+            {filteredItems.map((expense) => {
+                return <Expenseitems key={expense.id}
+                    title={expense.title}
+                    amount={expense.amount}
+                    date={expense.date} />
+            })}
         </Card>
     </div>
     )

@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import './App.css';
 import Expenses from './Component/Expenses/Expenses';
 import NewExpenses from './Component/Expenses/NewExpense/NewExpenses';
@@ -6,7 +7,7 @@ function App() {
   // const date = moment();
 
   // const currentDate = date.format('LL');
-  const expenseItems = [
+  const IntialState = [
     {
       id: 'e1',
       title: 'tv',
@@ -16,27 +17,29 @@ function App() {
     {
       id: 'e2',
       title: 'soap',
-      amount: '$50',
+      amount: '50',
       date: new Date()
     },
     {
       id: 'e3',
       title: 'car Insurance',
-      amount: '$260',
+      amount: '260',
       date: new Date()
     },
     {
       id: 'e4',
       title: 'rent',
-      amount: '$400',
+      amount: '400',
       date: new Date()
     }
   ]
-
+  const [expenseItems, setExpenseItems] = useState(IntialState);
   const AddExpenseData = (expense) => {
-    console.log('appjs');
-    console.log(expense);
+    setExpenseItems(prevExpense => {
+      return [expense, ...prevExpense];
+    });
   }
+
 
 
   return (

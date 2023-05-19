@@ -23,8 +23,6 @@
 
 .new_expense__actions {
     text-align: right;
-    position: absolute;
     float: right;
     left: 65%;
-    top: 22%;
 }
