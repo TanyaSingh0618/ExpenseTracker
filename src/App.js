@@ -11,14 +11,14 @@ function App() {
     {
       id: 'e1',
       title: 'tv',
-      amount: '$200',
-      date: new Date(2023, 0, 22)
+      amount: '200',
+      date: new Date(2023, 0, 20)
     },
     {
       id: 'e2',
       title: 'soap',
       amount: '50',
-      date: new Date()
+      date: new Date(2023, 3, 20)
     },
     {
       id: 'e3',
